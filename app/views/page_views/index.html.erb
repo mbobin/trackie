@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Page Views</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @page_views.each do |page_view| %>
+      <tr>
+        <td><%= link_to 'Show', page_view %></td>
+        <td><%= link_to 'Edit', edit_page_view_path(page_view) %></td>
+        <td><%= link_to 'Destroy', page_view, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Page View', new_page_view_path %>
